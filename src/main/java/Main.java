@@ -5,6 +5,10 @@ import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String [] args) {
+
+        //U R2 F B R B2 R U2 L B2 R U' D' R2 F R' L B2 U2 F2.
+
+
         LinkedList<String> lines = new LinkedList<>();
         lines.add("1,2,3");
         lines.add("4,5,6");
