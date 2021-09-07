@@ -1,51 +1,49 @@
-import jdk.nashorn.internal.ir.CaseNode;
-
 public class Side {
-    public Sides side;
-    public Sides left;
-    public Sides right;
-    public Sides up;
-    public Sides down;
+    public SideType side;
+    public SideType left;
+    public SideType right;
+    public SideType up;
+    public SideType down;
 
-    public Side(Sides side) {
+    public Side(SideType side) {
         this.side = side;
 
         switch (side) {
             case FRONT:
-                left = Sides.LEFT;
-                right = Sides.RIGHT;
-                up = Sides.UP;
-                down = Sides.DOWN;
+                left = SideType.LEFT;
+                right = SideType.RIGHT;
+                up = SideType.UP;
+                down = SideType.DOWN;
                 break;
             case LEFT:
-                left = Sides.BACK;
-                right = Sides.FRONT;
-                up = Sides.UP;
-                down = Sides.DOWN;
+                left = SideType.BACK;
+                right = SideType.FRONT;
+                up = SideType.UP;
+                down = SideType.DOWN;
                 break;
             case RIGHT:
-                left = Sides.FRONT;
-                right = Sides.BACK;
-                up = Sides.UP;
-                down = Sides.DOWN;
+                left = SideType.FRONT;
+                right = SideType.BACK;
+                up = SideType.UP;
+                down = SideType.DOWN;
                 break;
             case BACK:
-                left = Sides.RIGHT;
-                right = Sides.LEFT;
-                up = Sides.UP;
-                down = Sides.DOWN;
+                left = SideType.RIGHT;
+                right = SideType.LEFT;
+                up = SideType.UP;
+                down = SideType.DOWN;
                 break;
             case UP:
-                left = Sides.LEFT;
-                right = Sides.RIGHT;
-                up = Sides.BACK;
-                down = Sides.FRONT;
+                left = SideType.LEFT;
+                right = SideType.RIGHT;
+                up = SideType.BACK;
+                down = SideType.FRONT;
                 break;
             case DOWN:
-                left = Sides.LEFT;
-                right = Sides.RIGHT;
-                up = Sides.FRONT;
-                down = Sides.BACK;
+                left = SideType.LEFT;
+                right = SideType.RIGHT;
+                up = SideType.FRONT;
+                down = SideType.BACK;
                 break;
         }
     }

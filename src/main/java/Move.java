@@ -1,5 +1,5 @@
 public class Move {
-    public Sides side;
+    public SideType side;
     public MoveType type;
 
     public Move(String move) {
@@ -17,22 +17,22 @@ public class Move {
 
         switch (move.charAt(0)) {
             case 'F':
-                side = Sides.FRONT;
+                side = SideType.FRONT;
                 break;
             case 'U':
-                side = Sides.UP;
+                side = SideType.UP;
                 break;
             case 'D':
-                side = Sides.DOWN;
+                side = SideType.DOWN;
                 break;
             case 'B':
-                side = Sides.BACK;
+                side = SideType.BACK;
                 break;
             case 'L':
-                side = Sides.LEFT;
+                side = SideType.LEFT;
                 break;
             case 'R':
-                side = Sides.RIGHT;
+                side = SideType.RIGHT;
                 break;
         }
     }

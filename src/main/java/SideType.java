@@ -1,4 +1,4 @@
-public enum Sides {
+public enum SideType {
     FRONT(0),
     BACK(1),
     LEFT(2),
@@ -8,7 +8,7 @@ public enum Sides {
 
     private final int value;
 
-    private Sides(int value) {
+    private SideType(int value) {
         this.value = value;
     }
 

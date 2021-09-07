@@ -4,21 +4,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Main {
-    public static void main(String [] args) {
+    public static void main(String[] args) {
 
-        //U R2 F B R B2 R U2 L B2 R U' D' R2 F R' L B2 U2 F2.
-
-
-        LinkedList<String> lines = new LinkedList<>();
-        lines.add("1,2,3");
-        lines.add("4,5,6");
-
-        List<String> list = Arrays.asList("1,2,3","1,1,1","7,6,5");
-        List<List<Integer>> nestedList = list.stream()
-                .map(e-> Arrays.stream(e.split(","))
-                        .map(Integer::new)
-                        .collect(Collectors.toList()))
-                .collect(Collectors.toList());
-        System.out.println(22);
+        String strMoves = "U R2 F B R B2 R U2 L B2 R U' D' R2 F R' L B2 U2 F2";
+        LinkedList<String> moves = new LinkedList<String>(Arrays.asList(strMoves.split(" ")));
+        Cube cube = new Cube(moves);
     }
 }
