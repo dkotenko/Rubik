@@ -17,4 +17,12 @@ public enum SideColors {
         return value;
     }
 
+    public static SideColors getSideByValue(int value) {
+        for (int i = 0; i < SideColors.values().length; i++) {
+            if (SideColors.values()[i].getValue() == value) {
+                return SideColors.values()[i];
+            }
+        }
+        return null;
+    }
 }

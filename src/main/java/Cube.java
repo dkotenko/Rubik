@@ -70,10 +70,29 @@ public class Cube {
         return cube[side.getValue()] &= maskTwoFirst >> (4 * (cellNumber - 1));
     }
 
-    private void print() {
+    public void print() {
         //U
         for (int i = 0; i < 6; i++) {
+            printInt(cube[i], 1, 1);
+            System.out.println(cube[i]);
+        }
+    }
+
+    public static void printInt(int side, int sideSize, int offset) {
+        for (int bit = 1; bit < 9; bit++) {
+            int temp = side << bit - 1;
+            temp = temp >> 8 - bit;
+            for (int i = 0; i < offset * sideSize; i++) {
+                System.out.print(" ");
+            }
+
+            SideColors currSide = SideColors.getSideByValue(temp);
+            for (int i = 0; i < sideSize; i++) {
+                System.out.print(currSide.name().charAt(0));
+            }
             System.out.println();
         }
     }
+
+
 }
