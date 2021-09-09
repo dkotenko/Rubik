@@ -101,14 +101,14 @@ public class Cube {
         }
     }
 
-    public static void printInt(int side, int sideSize, int offset) {
+    public void printInt(int side, int sideSize, int offset) {
         for (int bit = 1; bit < 9; bit++) {
             int temp = side << bit - 1;
             temp = temp >> 8 - bit;
             for (int i = 0; i < offset * sideSize; i++) {
                 System.out.print(" ");
             }
-
+            System.out.println(temp);
             SideColors currSide = SideColors.getSideByValue(temp);
             for (int i = 0; i < sideSize; i++) {
                 System.out.print(currSide.name().charAt(0));
